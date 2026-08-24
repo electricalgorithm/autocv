@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ cv.person.name }}</title>
+<style>{{ css|safe }}</style>
+</head>
+<body>
+
+{% macro entry_heading(bold_text, url, plain_text) -%}
+<span class="entry-title">{{ bold_text }}</span>
+{%- if plain_text %}, {% if url %}<a href="{{ url }}">{{ plain_text }}</a>{% else %}{{ plain_text }}{% endif %}
+{%- endif %}
+{%- endmacro %}
+
+<div class="header">
+  <div class="name">{{ cv.person.name }}</div>
+  <div class="headline">{{ cv.person.headline }}</div>
+  <div class="contact-line">
+    {{ cv.contact.email }} &middot; {{ cv.contact.phone }} &middot; {{ cv.contact.location }}
+    {%- if cv.contact.linkedin %} &middot; <a href="https://www.linkedin.com/in/{{ cv.contact.linkedin }}">in/{{ cv.contact.linkedin }}</a>{% endif %}
+    {%- if cv.contact.github %} &middot; <a href="https://github.com/{{ cv.contact.github }}">{{ cv.contact.github }}</a>{% endif %}
+    {%- if cv.contact.website %} &middot; <a href="https://{{ cv.contact.website }}">{{ cv.contact.website }}</a>{% endif %}
+    {%- if cv.contact.scholar %} &middot; <a href="{{ cv.contact.scholar }}">Google Scholar</a>{% endif %}
+  </div>
+</div>
+
+<p class="summary">{{ cv.summary }}</p>
+
+{% if cv.experience %}
+<section>
+  <h2>Professional Experience</h2>
+  {% for e in cv.experience %}
+  <div class="entry">
+    <div class="entry-heading-line">
+      <span>{{ entry_heading(e.title, e.organization_url, e.organization) }}</span>
+      <span class="entry-date">{{ e.start|format_month }} &ndash; {{ e.end|format_month }}</span>
+    </div>
+    <div class="entry-location">{{ e.location }}</div>
+    {% if e.summary %}<p class="entry-body">{{ e.summary }}</p>{% endif %}
+    {% if e.highlights %}
+    <ul class="entry-bullets">
+      {% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% if e.keywords %}<p class="entry-tags">{{ e.keywords|join(", ") }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if cv.education %}
+<section>
+  <h2>Education</h2>
+  {% for ed in cv.education %}
+  <div class="entry">
+    <div class="entry-heading-line">
+      <span>{{ entry_heading(ed.degree, ed.institution_url, ed.institution) }}</span>
+      <span class="entry-date">{{ ed.start|format_month }} &ndash; {{ ed.end|format_month }}</span>
+    </div>
+    <div class="entry-location">{{ ed.location }}</div>
+    {% if ed.detail %}<p class="entry-detail">{{ ed.detail }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if cv.skills %}
+<section>
+  <h2>Skills</h2>
+  <p class="skills-list">{{ cv.skills|join(" &middot; ") }}</p>
+</section>
+{% endif %}
+
+{% if cv.certifications %}
+<section>
+  <h2>Certifications</h2>
+  <p class="skills-list">{{ cv.certifications|join(" &middot; ") }}</p>
+</section>
+{% endif %}
+
+{% if cv.publications %}
+<section>
+  <h2>Publications</h2>
+  {% for pub in cv.publications %}
+  <div class="entry">
+    <div class="entry-heading-line">
+      <span>{{ entry_heading(pub.title, pub.url, pub.venue) }}</span>
+      <span class="entry-date">{{ pub.date|format_month }}</span>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if cv.projects %}
+<section>
+  <h2>Open Source Projects</h2>
+  {% for p in cv.projects %}
+  <div class="entry">
+    <div class="entry-heading-line">
+      <span>{{ entry_heading(p.title, p.url, p.detail or "") }}</span>
+      <span class="entry-date">{{ p.categories|join(", ") }}</span>
+    </div>
+    {% if p.stack %}<p class="entry-tags">{{ p.stack|join(", ") }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if cv.references or cv.languages %}
+<div class="two-col">
+  {% if cv.references %}
+  <section class="col">
+    <h2>References</h2>
+    {% for r in cv.references %}
+    <p class="reference">
+      <span class="bold">{{ r.name }}</span> <span class="italic">, {{ r.title }},</span><br>
+      {{ r.organization }}<br>
+      {{ r.email }}
+    </p>
+    {% endfor %}
+  </section>
+  {% endif %}
+  {% if cv.languages %}
+  <section class="col">
+    <h2>Languages</h2>
+    {% for lang in cv.languages %}
+    <p class="language"><span class="bold">{{ lang.name }}</span> &mdash; {{ lang.level }}</p>
+    {% endfor %}
+  </section>
+  {% endif %}
+</div>
+{% endif %}
+
+</body>
+</html>

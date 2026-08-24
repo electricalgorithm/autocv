@@ -1,0 +1,193 @@
+person:
+  name: Gyokhan Kochmarla
+  headline: Software Engineer
+  photo: assets/photo.jpg
+  birth_date: 2001-11-02
+  citizenships: [Bulgarian, Turkish]
+  work_authorization: full working permission in Germany
+
+contact:
+  email: hello@gyokhan.com
+  phone: "+49 162 3348183"
+  location: Dresden, Germany
+  linkedin: gokhankocmarli
+  github: electricalgorithm
+  website: gyokhan.com
+  scholar: https://scholar.google.com/citations?user=VbZdKZ4AAAAJ
+
+summary: >
+  I'm a software engineer & researcher with a focus on the end-to-end product
+  lifecycle, from initial architectural design to the deployment of
+  high-performance systems. I am driven by a deep-seated curiosity for the
+  state-of-the-art and a commitment to understanding the internal mechanics
+  of the technology I build. With a diverse background spanning
+  hardware-software boundaries and kernel-level development, I thrive in
+  intensive R&D environments that demand the invention and optimisation of
+  solutions that push the limits of modern computing.
+
+experience:
+  - title: Software Development Engineer II - Amazon Linux Kernel
+    organization: Amazon Web Services
+    organization_url: https://aws.amazon.com
+    location: Dresden, Germany
+    start: "2025-12"
+    end: present
+    summary: >
+      Developed the performance tracking system with micro and macro
+      benchmarks to detect regressions before releases. Contributed to the
+      team to maintain our LTS trees, release kernels biweekly, inspect the
+      testing failures and handle customer support tickets regarding
+      features requested. Prepared an agent pool to handle all operational
+      aspects of the described work.
+    keywords:
+      - Upstream Development
+      - Kernel Debugging
+      - Agents Architecture (Skills, SOPs, RAGs)
+      - Patchset-based Downstream Development
+      - Performance Regression Detection
+
+  - title: Software Development Engineer - Amazon Linux Testing
+    organization: Amazon Web Services
+    organization_url: https://aws.amazon.com
+    location: Dresden, Germany
+    start: "2024-11"
+    end: "2025-12"
+    summary: >
+      Build testing infrastructure for Amazon Linux operating systems,
+      including kernel, GUI, package testing and performance benchmarking.
+      The system tests each distro and kernel combination with ~30,000
+      regression tests nightly to improve release reliability. Implemented
+      AI agents to debug infrastructure issue tickets to help on-callers.
+    keywords:
+      - Serverless Architecture
+      - IaC
+      - EC2
+      - S3
+      - IAM
+      - CloudFormation
+
+  - title: Embedded & Firmware Software Engineer
+    organization: Accenture Industry X
+    organization_url: https://www.accenture.com
+    location: Istanbul, Turkey
+    start: "2023-07"
+    end: "2024-10"
+    summary: >
+      Delivered firmware for IoT/embedded applications for European clients
+      - mainly focused on embedded Linux systems and in-house AI
+      development. Led projects as one/two-person teams with agile
+      development methodologies across the hardware-software lifecycles.
+    keywords:
+      - gRPC
+      - Conan
+      - PetaLinux
+      - Jenkins
+      - LLMs
+      - LangChain
+      - OpenCV
+      - SAFe
+      - SCRUM
+      - Project Management
+      - Electron Microscopy
+
+  - title: Embedded Software R&D Engineer
+    organization: Sixfab Inc.
+    organization_url: https://sixfab.com
+    location: Istanbul, Turkey
+    start: "2022-08"
+    end: "2023-05"
+    summary: >
+      Contributed to open-source Sixfab packages to help clients easily
+      build cellular-enabled IoT devices. Take an active role in delivering
+      the PicoLTE project from driver development to TCP/IP protocols.
+      Helped the team to enable hardware-in-loop test automation for the
+      products.
+    keywords:
+      - Quectel/TELIT Modems
+      - IoT (LTE, GSM) UART
+      - I2C
+      - MQTT
+      - MicroPython
+      - Embedded Linux
+
+education:
+  - degree: BEng. Electrical & Electronics Engineering
+    institution: Marmara University
+    institution_url: https://marmara.edu.tr
+    location: Istanbul, Turkey
+    start: "2020-09"
+    end: "2024-07"
+    detail: High-honours degree with 3.57/4.00 GPA.
+
+skills:
+  - Client/Customer Relations
+  - SCRUM, SAFe Project Lead
+  - AWS Serverless (EC2, S3, Lambda, IAM, CF)
+  - Linux Kernel Development
+  - Baremetal MCU Development
+  - Zephyr RTOS
+  - IoT - LTE, BLE, WiFi
+  - Machine Learning
+  - Agents - LLMs
+  - Computer Vision & Image Processing
+  - Test Automation
+
+publications:
+  - title: >-
+      HoloPASWIN: Robust Inline Holographic Reconstruction via Physics-Aware
+      Swin Transformers
+    venue: (Preprint) ArXiv, Image and Video Processing
+    date: "2026-03"
+    url: https://arxiv.org/abs/2603.04926
+  - title: Performance Comparison Index for Image Super-Resolution Models
+    venue: Springer Nature - Signal, Image and Video Processing
+    date: "2024-08"
+    url: https://link.springer.com/article/10.1007/s11760-024-03430-8
+
+projects:
+  - title: "ProtoMQ: Broker-Enforced ProtoBuf Schemas in MQTT"
+    categories: [Embedded, Web]
+    detail: 31+ stars on GitHub
+    stack: [Ziglang, AI-assistant coding, MQTT, Benchmarking System Design]
+    url: https://github.com/electricalgorithm/protomq
+  - title: SmartWatch with Zephyr RTOS
+    categories: [Embedded]
+    detail: 19+ stars on GitHub
+    stack: [ESP32, LVGL, Zephyr RTOS, Bluetooth LE]
+    url: https://github.com/electricalgorithm/zephyr-watch
+  - title: Rubie's Steganography - Paper Implementation
+    categories: [Research, DSP]
+    detail: 14+ stars on GitHub
+    stack: [Fast Fourier Transform, Steganography, Python, Signal Modulations]
+    url: https://github.com/electricalgorithm/rubies-steganography
+  - title: Digital Signal Processing Library in Mojolang
+    categories: [Research, DSP]
+    detail: 4+ stars on GitHub
+    stack: [Mojolang, SIMD Instructions, Windowing, FFT/DFT, Digital Filters]
+    url: https://github.com/electricalgorithm/dsplib-mojo
+  - title: Anomaly Detection and Predictive Maintenance on Diesel Engines
+    categories: [Embedded, ML, Web]
+    stack: [Project Management, nRF91, Zephyr RTOS, NB-IoT, CoAP, TinyML, Python-Flask]
+    url: https://www.youtube.com/watch?v=fLZGJlU4we4
+
+references:
+  - name: Maik Hentsche
+    title: Software Development Manager
+    organization: Amazon Web Services
+    email: caldrin@amazon.de
+  - name: Atakan Çelik
+    title: Embedded Systems Team Lead
+    organization: Accenture Industry X
+    email: atakan.celik@accenture.com
+  - name: Yasin Kaya
+    title: R&D Director of Embedded Software
+    organization: Sixfab Inc.
+    email: yasin@sixfab.com
+
+languages:
+  - name: English
+    level: Professional
+  - name: Turkish
+    level: Native
+  - name: German
+    level: A2+
