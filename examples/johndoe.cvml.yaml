@@ -1,0 +1,107 @@
+person:
+  name: John Doe
+  headline: Senior Backend Engineer
+  citizenships: [German]
+  work_authorization: full working permission in the EU
+
+contact:
+  email: john.doe@example.com
+  phone: "+49 30 1234567"
+  location: Berlin, Germany
+  linkedin: johndoe
+  github: johndoe
+  website: johndoe.example.com
+
+summary: >
+  I'm a backend engineer with eight years of experience building payment,
+  onboarding and logistics systems. I work mostly in Go, Python and Java on
+  distributed services backed by PostgreSQL and Kafka, and I care about
+  reliability: idempotent APIs, useful alerts and calm incident response.
+  Lately I've been leading platform work and mentoring engineers on the
+  payments team.
+
+experience:
+  - title: Senior Backend Engineer - Payments Platform
+    organization: Northwind Payments
+    organization_url: https://example.com/northwind
+    location: Berlin, Germany
+    start: "2023-03"
+    end: present
+    highlights:
+      - Split the payment-authorization monolith into three Go services over gRPC, cutting p99 latency from 480 ms to 120 ms at 2,500 req/s.
+      - Added idempotency keys and a Kafka outbox to all money-moving writes, ending recurring duplicate-charge incidents.
+      - Moved 14 services to a shared Kubernetes template with canary rollouts, cutting deploy time from 35 to 8 minutes.
+      - Mentored three engineers to promotion and ran the backend interview loop (40+ interviews).
+    keywords: [Go, PostgreSQL, Kafka, Kubernetes, gRPC]
+
+  - title: Backend Engineer - Merchant Onboarding
+    organization: Northwind Payments
+    organization_url: https://example.com/northwind
+    location: Berlin, Germany
+    start: "2021-01"
+    end: "2023-03"
+    highlights:
+      - Built the merchant KYC pipeline across three vendor APIs, cutting manual review from 70% to 18% of applications.
+      - Designed the public onboarding REST API used by 30+ partner platforms.
+      - Replaced a cron job with an SQS and Lambda pipeline, cutting median onboarding time from two days to four hours.
+    keywords: [Python, Django, AWS, Terraform]
+
+  - title: Software Engineer
+    organization: Brightline Logistics
+    organization_url: https://example.com/brightline
+    location: Hamburg, Germany
+    start: "2018-09"
+    end: "2020-12"
+    highlights:
+      - Built the shipment-tracking service ingesting 1.2M carrier updates per day over RabbitMQ.
+      - Integrated a vehicle-routing solver into dispatch, cutting planned route distance by 11%.
+      - Cut the nightly billing batch from 5 hours to 40 minutes.
+    keywords: [Java, Spring Boot, MySQL, RabbitMQ]
+
+education:
+  - degree: MSc. Computer Science
+    institution: Example Technical University
+    institution_url: https://example.edu
+    location: Munich, Germany
+    start: "2016-10"
+    end: "2018-08"
+    detail: Thesis on approximation algorithms for vehicle routing, grade 1.3.
+
+skills:
+  - Go, Python, Java
+  - PostgreSQL & MySQL Performance Tuning
+  - Kafka & Event-Driven Architecture
+  - Kubernetes, Terraform, AWS
+  - Observability (Prometheus, Grafana)
+  - REST & gRPC API Design
+  - Incident Management & Mentoring
+
+projects:
+  - title: "pgwatch-lite: Lightweight Postgres Query Monitor"
+    categories: [Databases, CLI]
+    detail: 250+ stars on GitHub
+    stack: [Go, PostgreSQL, Prometheus]
+    url: https://github.com/johndoe/pgwatch-lite
+  - title: "outboxer: Transactional Outbox Library for Go"
+    categories: [Distributed Systems]
+    detail: 90+ stars on GitHub
+    stack: [Go, PostgreSQL, Kafka]
+    url: https://github.com/johndoe/outboxer
+
+references:
+  - name: Jane Roe
+    title: Engineering Manager
+    organization: Northwind Payments
+    email: jane.roe@example.com
+  - name: Max Mustermann
+    title: Head of Engineering
+    organization: Brightline Logistics
+    email: max.mustermann@example.com
+
+languages:
+  - name: German
+    level: Native
+  - name: English
+    level: Professional
+  - name: Spanish
+    level: B1
